@@ -1,20 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package employee.payroll.system;
 
 /**
  *
- * @author user
+ * @author Banna
  */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        PayrollSystem payrollSystem =new PayrollSystem();
+        FullTimeEmployee full = new FullTimeEmployee("banna", 1, 70000.0);
+        PartTimeEmployee part = new PartTimeEmployee("Abdul", 2, 40, 20.0);
+        
+        payrollSystem.addEmployee(full);
+        payrollSystem.addEmployee(part);
+        System.out.println("Initial Employee Details: ");
+        payrollSystem.displayEmployee();
+        System.out.println("removing Employee");
+        payrollSystem.removeEmployee(2);
+        System.out.println("Remaining Employee Details: ");
+        payrollSystem.displayEmployee();
     }
     
 }

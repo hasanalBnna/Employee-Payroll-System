@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package employee.payroll.system;
 
-/**
- *
- * @author user
- */
-public class FullTimeEmployee {
+ class FullTimeEmployee extends Employee{
+    private double monthlySalary;
     
+    public FullTimeEmployee(String name, int id, double monthlySalary){
+        super(name, id);
+        this.monthlySalary = monthlySalary;
+    }
+    
+    @Override
+    public double calculateSalary(){
+        return monthlySalary;
+    }
 }

@@ -1,13 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package employee.payroll.system;
 
-/**
- *
- * @author user
- */
-public class PartTimeEmployee {
+class PartTimeEmployee extends Employee {
+    private int hoursWorked;
+    private double hourlyRate;
     
+    public PartTimeEmployee(String name, int id, int hoursWorked, double hourlyRate){
+        super(name, id);
+        this.hoursWorked = hoursWorked;
+        this.hourlyRate = hourlyRate;
+    }
+    
+    @Override
+    public double calculateSalary(){
+        return hourlyRate * hoursWorked;
+    }
 }
